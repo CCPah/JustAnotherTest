@@ -1,0 +1,18 @@
+language: java
+
+jdk:
+  - oraclejdk8
+  
+build:
+  ci:
+   - mkdir -p shippable/testresults
+   - mkdir -p shippable/codecoverage
+
+  
+   - cd mvn-parent
+   - mvn install
+   
+  post-ci:
+   - cp /root/src/github.com/CCPah/CITest/CiTestTest/target/surefire-reports/* ../shippable/testresults/
+   - cd ../CiTestTest/target/surefire-reports/
+   - cp AllTests.xml ../../../shippable/testresults/
