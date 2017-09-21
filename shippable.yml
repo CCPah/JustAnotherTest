@@ -13,7 +13,14 @@ build:
    - cd mvn-parent
    - mvn clean verify
    
+  on_success:
    - cp ../target/surefire-reports/*.xml ../shippable/testresults/
    - cd ../shippable/testresults
    - ls
+   
+  on_failure:
+   - cp ../target/surefire-reports/*.xml ../shippable/testresults/
+   - cd ../shippable/testresults
+   - ls
+
    
