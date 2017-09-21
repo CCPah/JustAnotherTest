@@ -8,6 +8,7 @@ build:
    - mkdir -p shippable/testresults
    - mkdir -p shippable/codecoverage
 
+   - ls
   
    - cd mvn-parent
    - mvn clean verify
