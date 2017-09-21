@@ -12,7 +12,7 @@ build:
    - cd mvn-parent
    - mvn clean verify
    
-  post-ci:
    - cp ../target/surefire-reports/*.xml ../shippable/testresults/
    - cd ../shippable/testresults
    - ls
+   
