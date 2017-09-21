@@ -14,6 +14,8 @@ public class SampleNature implements IProjectNature {
 	public static final String NATURE_ID = "CITest.sampleNature";
 
 	private IProject project;
+	
+	private String change = "just a small change";
 
 	@Override
 	public void configure() throws CoreException {
