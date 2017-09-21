@@ -1,4 +1,4 @@
-package citest.builder;
+package main.builder;
 
 import org.eclipse.core.resources.ICommand;
 import org.eclipse.core.resources.IProject;

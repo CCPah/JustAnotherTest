@@ -9,7 +9,7 @@
       <builder
             hasNature="true">
          <run
-               class="citest.builder.SampleBuilder">
+               class="teststuff.builder.SampleBuilder">
          </run>
       </builder>
    </extension>
@@ -19,24 +19,24 @@
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="citest.builder.SampleNature">
+               class="teststuff.builder.SampleNature">
          </run>
       </runtime>
       <builder
-            id="CITest.sampleBuilder">
+            id="TestStuff.sampleBuilder">
       </builder>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <category
             name="Sample Project Nature commands"
-            id="CITest.sampleNature.category">
+            id="TestStuff.sampleNature.category">
       </category>
       <command
             name="Add/RemoveSample Project Nature"
-            defaultHandler="citest.builder.AddRemoveSampleNatureHandler"
-            categoryId="CITest.sampleNature.category"
-            id="CITest.addRemoveSampleNature">
+            defaultHandler="teststuff.builder.AddRemoveSampleNatureHandler"
+            categoryId="TestStuff.sampleNature.category"
+            id="TestStuff.addRemoveSampleNature">
       </command>
    </extension>
    <extension
@@ -44,7 +44,7 @@
       <menuContribution
             locationURI="popup:org.eclipse.ui.projectConfigure?after=additions">
          <command
-               commandId="CITest.addRemoveSampleNature"
+               commandId="TestStuff.addRemoveSampleNature"
                label="Disable Sample builder"
                style="push">
             <visibleWhen
@@ -58,7 +58,7 @@
                      <adapt
                            type="org.eclipse.core.resources.IProject">
                         <test
-                              value="CITest.sampleNature"
+                              value="TestStuff.sampleNature"
                               property="org.eclipse.core.resources.projectNature">
                         </test>
                      </adapt>
@@ -67,7 +67,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="CITest.addRemoveSampleNature"
+               commandId="TestStuff.addRemoveSampleNature"
                label="Enable Sample builder"
                style="push">
             <visibleWhen
@@ -82,7 +82,7 @@
                            type="org.eclipse.core.resources.IProject">
                         <not>
                            <test
-                                 value="CITest.sampleNature"
+                                 value="TestStuff.sampleNature"
                                  property="org.eclipse.core.resources.projectNature">
                            </test>
                         </not>
