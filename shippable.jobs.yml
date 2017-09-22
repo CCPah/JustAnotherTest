@@ -7,5 +7,5 @@ jobs:
   - name: TestStuff_runCI      # required
     type: runCI             # required
     steps:                  # required
-      - IN: nightly-trigger
+      - IN: nightly
       - IN: testRepo

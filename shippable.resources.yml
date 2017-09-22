@@ -4,14 +4,14 @@ jdk:
   - oraclejdk8
   
 resources:
-  - name: nightly-trigger
+  - name: nightly
     type: time
     seed:
       interval: "/2 * * * *"
       
   - name: testRepo
     type: gitRepo
-    integration: GitHub
+    integration: justatest
     pointer:
         sourceName: CCPah/JustAnotherTest
         branch: testbranch
