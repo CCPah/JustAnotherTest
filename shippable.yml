@@ -11,7 +11,7 @@ build:
    - ls
   
    - cd mvn-parent
-   - mvn clean verify
+   - mvn clean verify surefire:test
    
   on_success:
    - cp ../target/surefire-reports/*.xml ../shippable/testresults/
