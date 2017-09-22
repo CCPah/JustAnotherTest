@@ -7,4 +7,11 @@ resources:
   - name: nightly-trigger
     type: time
     seed:
-      interval: "1 0 * * *"
+      interval: "/2 * * * *"
+      
+  - name: testRepo
+    type: GitRepo
+    integration: GitHub
+    pointer:
+        sourceName: CCPah/JustAnotherTest
+        branch: testbranch
