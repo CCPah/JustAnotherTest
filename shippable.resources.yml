@@ -10,7 +10,7 @@ resources:
       interval: "/2 * * * *"
       
   - name: testRepo
-    type: GitRepo
+    type: gitRepo
     integration: GitHub
     pointer:
         sourceName: CCPah/JustAnotherTest
