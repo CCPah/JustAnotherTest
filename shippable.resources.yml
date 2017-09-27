@@ -7,7 +7,7 @@ resources:
   - name: nightly
     type: time
     seed:
-      interval: "/2 * * * *"
+      interval: "*/2 * * * *"
       
   - name: testRepo
     type: gitRepo
