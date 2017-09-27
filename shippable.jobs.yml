@@ -2,9 +2,13 @@ language: java
 
 jdk:
   - oraclejdk8
+
+matrix:
+    - BRANCH="master"
+    - BRANCH="testbranch"
   
 jobs:
-  - name: testRepo_runCI      # required
+  - name: JustAnotherTest_runCI      # required
     type: runCI             # required
     steps:                  # required
       - IN: nightly
