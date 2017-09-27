@@ -5,7 +5,7 @@ jdk:
   
 jobs:
   - name: testrunsh      # required
-    type: runSH             # required
+    type: runSh             # required
     steps:                  # required
       - IN: nightly
       - IN: testRepo
