@@ -4,7 +4,7 @@ jdk:
   - oraclejdk8
   
 jobs:
-  - name: TestStuff_runCI      # required
+  - name: JustAnotherTest_runCI      # required
     type: runCI             # required
     steps:                  # required
       - IN: nightly
