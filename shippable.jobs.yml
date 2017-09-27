@@ -9,7 +9,7 @@ jobs:
     steps:                  # required
       - IN: nightly
       - IN: testRepo
-      - Task:
+      - TASK:
         - script: cd /mvn-parent
         - script: mvn clean verify surefire:test
     on success: 
