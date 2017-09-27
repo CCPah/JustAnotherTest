@@ -4,19 +4,7 @@ jdk:
   - oraclejdk8
   
 jobs:
-  - name: testrunsh      # required
-    type: runSh             # required
+  - name: testRepo_runCI      # required
+    type: runCI             # required
     steps:                  # required
       - IN: nightly
-      - IN: testRepo
-      - TASK:
-        - script: cd /mvn-parent
-        - script: mvn clean verify surefire:test
-    on success: 
-        - script: echo "SUCCESS"
-    on failure:
-        - script: echo "FAILURE"
-    on cancel:
-        - script: echo "CANCEL"
-    always:
-        - script: echo pwd
