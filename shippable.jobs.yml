@@ -14,7 +14,7 @@ jobs:
             - script: cd $TESTREPO_STATE
             - script: cd mvn-parent
             - script: ls
-            #- script: mvn clean install
+            - script: mvn clean install
     on_success:
         - script:             echo "SUCCESS"
     on_failure:
