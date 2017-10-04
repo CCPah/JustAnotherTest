@@ -8,7 +8,7 @@ jobs:
     type: runSh             # required
     steps:                  # required
         #- IN: nightly
-        - IN: repo
+        - IN: testRepo
           showbuildstatus: true
         - TASK:
             - script: ssh-agent bash -c 'ssh-add /tmp/ssh/01_deploy; git clone https://github.com/CCPah/JustAnotherTest.git /root/src/github.com/CCPah/JustAnotherTest' 
