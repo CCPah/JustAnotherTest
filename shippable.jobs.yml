@@ -13,7 +13,8 @@ jobs:
         - TASK:
             - script: cd $TESTREPO_STATE
             - script: cd mvn-parent
-            - script: mvn clean install
+            - script: ls
+            #- script: mvn clean install
     on_success:
         - script:             echo "SUCCESS"
     on_failure:
