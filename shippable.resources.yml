@@ -4,10 +4,10 @@ jdk:
   - oraclejdk8
   
 resources:
-  - name: nightly
-    type: time
-    seed:
-      interval: "2 * * * *"
+  #- name: nightly
+   # type: time
+    #seed:
+     # interval: "2 * * * *"
       
   - name: testRepo
     type: gitRepo
