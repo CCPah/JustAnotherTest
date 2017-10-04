@@ -11,15 +11,7 @@ jobs:
         - IN: testRepo
           showbuildstatus: true
         - TASK:
-            - script: ssh-agent bash -c 'ssh-add /tmp/ssh/01_deploy; git clone https://github.com/CCPah/JustAnotherTest.git /root/src/github.com/CCPah/JustAnotherTest' 
-            - script: git config --get user.name || git config user.name 'Shippable Build'
-            - script: git config --get user.email || git config user.email 'build@shippable.com'
-            - script: rm -rf /root/src/github.com/CCPah/JustAnotherTest/shippable
-            - script: mkdir -p /root/src/github.com/CCPah/JustAnotherTest/shippable/testresults
-            - script: mkdir -p /root/src/github.com/CCPah/JustAnotherTest/shippable/codecoverage
-            - script: mkdir -p /root/src/github.com/CCPah/JustAnotherTest/shippable/buildoutput
-            - script: git checkout -f master --
-            - script: ls
+            - script: cd $TESTREPO_STATE
             - script: cd mvn-parent
             - script: mvn clean install
     on_success:
