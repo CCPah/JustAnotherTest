@@ -26,3 +26,4 @@ jobs:
   - name: justAnotherTest_runCI
     type: runCI
     steps:
+      - IN: nightly
