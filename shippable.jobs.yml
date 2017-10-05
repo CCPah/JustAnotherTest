@@ -11,7 +11,7 @@ jobs:
         - IN: testRepo
           showbuildstatus: true
         - TASK:
-            - script: sudo apt-get install maven
+           # - script: sudo apt-get install maven
             - script: cd $TESTREPO_STATE
             - script: cd mvn-parent
             - script: ls
