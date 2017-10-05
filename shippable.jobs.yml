@@ -23,7 +23,7 @@ jobs:
     on_cancel:
         - script:             echo "CANCEL"
         
-  - name: justAnotherTest_runCI
+  - name: JustAnotherTest_runCI
     type: runCI
     steps:
       - IN: nightly
