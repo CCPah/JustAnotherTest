@@ -6,7 +6,7 @@ jdk:
 build:
   ci:
   
-   - if [ "$JOB_NAME" == "master" ]; then git checkout testbranch; fi
+   - if [ "$JOB_NAME" == "JustAnotherTest_runCI" ]; then git checkout testbranch; fi
    - mkdir -p shippable/testresults
    - mkdir -p shippable/codecoverage
 
