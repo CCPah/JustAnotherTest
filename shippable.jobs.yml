@@ -11,7 +11,7 @@ jobs:
         - IN: testRepo
           showbuildstatus: true
         - TASK:
-            - script: sudo docker run -d --privileged=true --net=bridge -v /home/shippable/cexec:/home/shippable/cexec -v /opt/docker/docker:/usr/bin/docker -v /home/shippable/cache:/home/shippable/cache -v /tmp/cexec:/tmp/cexec -v /var/run/docker.sock:/var/run/docker.sock -v /build:/build --name=c.exec.JustAnotherTest.58.1 --entrypoint=/home/shippable/cexec/build.sh -e RUN_MODE=production -e SHIPPABLE_API_URL=https://con.shippable.com -e SHIPPABLE_API_RETRY_INTERVAL=3 -e SHIPPABLE_CONTAINER_NAME=c.exec.JustAnotherTest.58.1 -e SHIPPABLE_IS_OFFICIAL_IMAGE=true -e SHIPPABLE_DOCKER_VERSION=1.13.0 -e SHIPPABLE_IS_LEGACY_IMAGE=false -e SHIPPABLE_NODE_ARCHITECTURE=x86_64 drydock/u16javall:v5.4.1
+            - script: sudo apt-get install maven
             - script: cd $TESTREPO_STATE
             - script: cd mvn-parent
             - script: ls
