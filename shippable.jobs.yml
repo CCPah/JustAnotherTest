@@ -11,7 +11,7 @@ jobs:
         - IN: testRepo
           showbuildstatus: true
         - TASK:
-           # - script: sudo apt-get install maven
+           #- script: sudo apt-get install maven # run this if mvn is an unknown command
             - script: cd $TESTREPO_STATE
             - script: cd mvn-parent
             - script: ls
@@ -22,3 +22,7 @@ jobs:
         - script:             echo "FAILED"
     on_cancel:
         - script:             echo "CANCEL"
+        
+    - name: justAnotherTest_runCI
+      type: runCI
+      steps:
