@@ -3,12 +3,14 @@ language: java
 jdk:
   - oraclejdk8
   
+env:
+  - NightlyBuild = master
+  - NightlyBuild = testbranch
+  
 build:
   ci:
   
-   - if [ "$JOB_NAME" == "JustAnotherTest_runCI" ]; then git checkout testbranch; fi
-   - mkdir -p shippable/testresults
-   - mkdir -p shippable/codecoverage
+   - git checkout $NIGHTLYBUILD
 
    - ls
   
