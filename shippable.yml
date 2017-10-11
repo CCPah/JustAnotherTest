@@ -5,7 +5,7 @@ jdk:
   
 env:
   - NIGHTLYBUILD=master
-  - NIGHTLYbuild=testbranch
+  - NIGHTLYBUILD=testbranch
   
 build:
   ci:
