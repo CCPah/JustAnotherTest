@@ -6,6 +6,10 @@ jdk:
 env:
   - NIGHTLYBUILD=master
   - NIGHTLYBUILD=testbranch
+
+matrix:
+  allow_failures:
+   - env: NIGHTLYBUILD=testbranch
   
 build:
   ci:
