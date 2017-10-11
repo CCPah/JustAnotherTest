@@ -4,8 +4,8 @@ jdk:
   - oraclejdk8
   
 env:
-  - NightlyBuild = master
-  - NightlyBuild = testbranch
+  - NIGHTLYBUILD=master
+  - NIGHTLYbuild=testbranch
   
 build:
   ci:
