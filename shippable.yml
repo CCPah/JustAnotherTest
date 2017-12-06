@@ -15,7 +15,7 @@ matrix:
             - NIGHTLYBUILD=testbranch
     include:
         - env: 
-            - NIGHTLYBUILD=master
+            - NIGHTLYBUILD=testbranch
             - JOB_TRIGGERED_BY_NAME="nightly"
   
 build:
