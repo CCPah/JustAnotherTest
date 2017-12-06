@@ -11,9 +11,15 @@ matrix:
     allow_failures:
         - env: NIGHTLYBUILD=testbranch
 
+    exclude:
+        - env:
+            - NIGHTLYBUILD=master
+        - env:
+            - NIGHTLYBUILD=testbranch
     include:
         - env: 
             - NIGHTLYBUILD=master
+            - JOB_TRIGGERED_BY_NAME="nightly"
   
 build:
   ci:
