@@ -4,16 +4,13 @@ jdk:
   - oraclejdk8
 
 env:
-  - NIGHTLYBUILD=master
+  - NIGHTLYBUILD=$BRANCH
   - NIGHTLYBUILD=testbranch
 
 matrix:
     allow_failures:
         - env: NIGHTLYBUILD=testbranch
 
-    exclude:
-        - env:
-            - NIGHTLYBUILD=master
         - env:
             - NIGHTLYBUILD=testbranch
     include:
