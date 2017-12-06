@@ -6,51 +6,17 @@ jdk:
 env:
   - NIGHTLYBUILD=master
   - NIGHTLYBUILD=testbranch
-  
-<<<<<<< HEAD
+
 matrix:
-  allow_failures:
-   - env: NIGHTLYBUILD=testbranch
+    allow_failures:
+        - env: NIGHTLYBUILD=testbranch
 
    include:
-   - env: 
-    - NIGHTLYBUILD=master
-    
-=======
-env:
-  - NIGHTLYBUILD=master
-  - NIGHTLYBUILD=testbranch
-
-matrix:
-  allow_failures:
-   - env: NIGHTLYBUILD=testbranch
-  
-build:
-  ci:
-  
-   - git checkout $NIGHTLYBUILD
-
-   - ls
->>>>>>> a2dc17c3b2e1f30ce44e6367573db4f86b40f875
+        - env: 
+            - NIGHTLYBUILD=master
   
 build:
   ci:
    - git checkout $NIGHTLYBUILD
    - cd mvn-parent
-<<<<<<< HEAD
    - mvn clean verify surefire:test --fail-at-end
-=======
-   - mvn clean verify surefire:test
-   
-  on_success:
-   - cp ../target/surefire-reports/*.xml ../shippable/testresults/
-   - cd ../shippable/testresults
-   - ls
-   
-  on_failure:
-   - cp ../target/surefire-reports/*.xml ../shippable/testresults/
-   - cd ../shippable/testresults
-   - ls
-
-   
->>>>>>> a2dc17c3b2e1f30ce44e6367573db4f86b40f875
