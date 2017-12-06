@@ -6,8 +6,8 @@ jdk:
 env:
   - NIGHTLYBUILD=$BRANCH
   - NIGHTLYBUILD=testbranch
-  global:
-    - trigger=$JOB_TRIGGERED_BY_NAME
+    global:
+        - trigger=$JOB_TRIGGERED_BY_NAME
 
 matrix:
     allow_failures:
