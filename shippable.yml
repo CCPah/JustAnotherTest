@@ -13,7 +13,7 @@ matrix:
 
     exclude:
         - env:
-            - NIGHTLYBUILD=testbranch $JOB_TRIGGERED_BY_NAME=""
+            - NIGHTLYBUILD=testbranch $JOB_TRIGGERED_BY_NAME == ""
   
 build:
   ci:
