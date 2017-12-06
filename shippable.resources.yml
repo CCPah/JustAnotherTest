@@ -4,8 +4,14 @@ jdk:
   - oraclejdk8
   
 resources:
-  - name: nightly
-    type: time
-    seed:
-      interval: "*/5 * * * *"
+    - name: nightly
+        type: time
+        seed:
+        interval: "*/5 * * * *"
 
+
+    - name: upNext
+        type: params
+        version:
+            params:
+                KEY1: temp

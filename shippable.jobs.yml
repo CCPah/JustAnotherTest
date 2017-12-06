@@ -4,26 +4,10 @@ jdk:
   - oraclejdk8
   
 jobs:
-  - name: justAnotherRunSh      # required
-    type: runSh             # required
-    steps:                  # required
-        #- IN: nightly
-        - IN: testRepo
-          showbuildstatus: true
-        - TASK:
-           #- script: sudo apt-get install maven # run this if mvn is an unknown command
-            - script: cd $TESTREPO_STATE
-            - script: cd mvn-parent
-            - script: ls
-            - script: mvn clean install
-    on_success:
-        - script:             echo "SUCCESS"
-    on_failure:
-        - script:             echo "FAILED"
-    on_cancel:
-        - script:             echo "CANCEL"
         
   - name: JustAnotherTest_runCI
     type: runCI
     steps:
       - IN: nightly
+      - IN: upNext
+      - OUT: upNext
