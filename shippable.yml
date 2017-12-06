@@ -2,7 +2,21 @@ language: java
 
 jdk:
   - oraclejdk8
+
+env:
+  - NIGHTLYBUILD=master
+  - NIGHTLYBUILD=testbranch
   
+<<<<<<< HEAD
+matrix:
+  allow_failures:
+   - env: NIGHTLYBUILD=testbranch
+
+   include:
+   - env: 
+    - NIGHTLYBUILD=master
+    
+=======
 env:
   - NIGHTLYBUILD=master
   - NIGHTLYBUILD=testbranch
@@ -17,8 +31,15 @@ build:
    - git checkout $NIGHTLYBUILD
 
    - ls
+>>>>>>> a2dc17c3b2e1f30ce44e6367573db4f86b40f875
   
+build:
+  ci:
+   - git checkout $NIGHTLYBUILD
    - cd mvn-parent
+<<<<<<< HEAD
+   - mvn clean verify surefire:test --fail-at-end
+=======
    - mvn clean verify surefire:test
    
   on_success:
@@ -32,3 +53,4 @@ build:
    - ls
 
    
+>>>>>>> a2dc17c3b2e1f30ce44e6367573db4f86b40f875

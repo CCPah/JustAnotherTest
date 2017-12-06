@@ -7,6 +7,9 @@ resources:
   - name: nightly
     type: time
     seed:
+<<<<<<< HEAD
+      interval: "*/5 * * * *"
+=======
       interval: "* * * 1 *"
       
   - name: testRepo
@@ -15,3 +18,4 @@ resources:
     pointer:
         sourceName: CCPah/JustAnotherTest
         branch: testbranch
+>>>>>>> a2dc17c3b2e1f30ce44e6367573db4f86b40f875
