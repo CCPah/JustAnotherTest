@@ -4,8 +4,8 @@ jdk:
   - oraclejdk8
 
 env:
-  - NIGHTLYBUILD=$BRANCH trigger=$JOB_TRIGGERED_BY_NAME
-  - NIGHTLYBUILD=testbranch trigger=$JOB_TRIGGERED_BY_NAME
+  - NIGHTLYBUILD=$BRANCH $JOB_TRIGGERED_BY_NAME
+  - NIGHTLYBUILD=testbranch $JOB_TRIGGERED_BY_NAME
 
 matrix:
     allow_failures:
@@ -13,7 +13,7 @@ matrix:
 
     exclude:
         - env:
-            - NIGHTLYBUILD=testbranch trigger=""
+            - NIGHTLYBUILD=testbranch $JOB_TRIGGERED_BY_NAME=""
   
 build:
   ci:
