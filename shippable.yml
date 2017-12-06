@@ -6,17 +6,16 @@ jdk:
 env:
   - NIGHTLYBUILD=$BRANCH
   - NIGHTLYBUILD=testbranch
+  - trigger=$JOB_TRIGGERED_BY_NAME
 
 matrix:
     allow_failures:
         - env: NIGHTLYBUILD=testbranch
 
+    exclude:
         - env:
             - NIGHTLYBUILD=testbranch
-    include:
-        - env: 
-            - NIGHTLYBUILD=testbranch
-            - JOB_TRIGGERED_BY_NAME="nightly"
+            - trigger=""
   
 build:
   ci:
