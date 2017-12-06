@@ -11,4 +11,4 @@ build:
    
     post_ci:
         - if [ $JOB_TRIGGERED_BY_NAME == nightly ]; then shipctl post_resource_state upNext KEY1 testbranch; fi
-        - if [ $KEY1 == testbranch ]; then shipctl post_resource_state upNext KEY1 temp; fi
+        - if [ $KEY1 == testbranch ]; then shipctl post_resource_state upNext KEY1 "temp"; fi
