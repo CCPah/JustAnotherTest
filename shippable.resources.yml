@@ -10,13 +10,3 @@ resources:
         interval: "*/5 * * * *"
 
 
-    - name: upNext
-      type: params
-      version:
-        params:
-            KEY1: temp
-            
-    - name: JustAnotherTest_ciRepo
-      type: ciRepo
-      pointer:
-        sourceName: CCPah/JustAnotherTest
