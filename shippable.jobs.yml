@@ -9,5 +9,4 @@ jobs:
     type: runCI
     steps:
       - IN: nightly
-      - IN: upNext
       - OUT: upNext
